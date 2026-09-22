@@ -4,23 +4,20 @@
 
 The objective of this assignment is to understand the difference between:
 
-* Continuous Integration
-* Continuous Delivery
-* Continuous Deployment
-
-The assignment also demonstrates a theoretical CI/CD pipeline for a simple web application and identifies the tools that can be used at each stage.
-
----
+- Continuous Integration
+- Continuous Delivery
+- Continuous Deployment
 
 ## 1. Continuous Integration
 
-Continuous Integration, or CI, is a DevOps practice where developers frequently merge their code changes into a shared repository.
+Continuous Integration (CI) is a DevOps practice where developers frequently push their code to shared repository.
 
-Whenever new code is pushed, automated build and testing processes can run to check whether the application is working correctly.
+When any developers commit new code, so it automatically build application,run testand check errors.So developer can easily get build or fails.
 
 ### Example Flow
 
-```text
+text
+    ↓
 Developer
     ↓
 Git
@@ -30,22 +27,13 @@ GitHub
 Build
     ↓
 Automated Tests
-```
-
-### Example Tools
-
-* Git
-* GitHub
-* GitHub Actions
-* Jenkins
-* Maven
-* PyTest
 
 ---
 
 ## 2. Continuous Delivery
 
-Continuous Delivery means that after the application is successfully built and tested, it is automatically prepared for release.
+Continuous Delivery means that application is automatically,
+Developed -> Build -> Tested -> Prepared for Deployment.
 
 However, deployment to the production environment requires manual approval.
 
@@ -65,13 +53,13 @@ Manual Approval
 Production
 ```
 
-For example, after testing an application successfully, a DevOps engineer or authorized person approves the production deployment.
+Note: After testing an application successfully, a DevOps engineer or authorized person approves the production deployment.
 
 ---
 
 ## 3. Continuous Deployment
 
-Continuous Deployment automatically deploys the application to production after all required automated tests are successfully completed.
+Continuous Deployment  is the stage where application is automatically deployed to production.
 
 There is no manual approval before production deployment.
 
@@ -95,42 +83,20 @@ Production
 
 ## Continuous Delivery vs Continuous Deployment
 
-| Feature               | Continuous Delivery | Continuous Deployment |
-| --------------------- | ------------------- | --------------------- |
-| Code Integration      | Automated           | Automated             |
-| Build                 | Automated           | Automated             |
-| Testing               | Automated           | Automated             |
-| Staging Deployment    | Automated           | Automated             |
-| Production Deployment | Manual              | Automated             |
-| Manual Approval       | Required            | Not Required          |
-
-### Main Difference
-
-In Continuous Delivery:
-
-```text
-Successful Testing
-       ↓
-Manual Approval
-       ↓
-Production
-```
-
-In Continuous Deployment:
-
-```text
-Successful Testing
-       ↓
-Automatic Deployment
-       ↓
-Production
-```
+| Feature               | Continuous Delivery         | Continuous Deployment |
+| --------------------- | -------------------         | --------------------- |
+| Automation            | Automated until production  | Fully automated       |     
+| Approval              | Manual approval needed      | No manual approval    |
+| Control and risk      | Lower risk                  | Higher automation risk|
+| Use Cases             | Controlled releases         | Frequent releases     |
+| Customer Feedback     | Slower                      | Faster                |
+| Rollback Capability   | Usually manual              | Can be automated      |     
 
 ---
 
 # Theoretical CI/CD Pipeline
 
-For this assignment, a simple web application is considered.
+A simple web application is considered as -
 
 The theoretical CI/CD pipeline is:
 
@@ -179,127 +145,6 @@ Monitoring
 | Deployment       | AWS EC2 / Azure VM         | Host the application                   |
 | Monitoring       | CloudWatch / Azure Monitor | Monitor application performance        |
 
----
-
-# Steps Followed
-
-## Step 1: Created Project
-
-A new folder named:
-
-```text
-CI-CD-Concepts-L1
-```
-
-was created and opened using Visual Studio Code.
-
-## Step 2: Created Simple Web Application
-
-An `index.html` file was created to represent a simple web application.
-
-## Step 3: Created Pipeline Script
-
-A PowerShell script named:
-
-```text
-pipeline.ps1
-```
-
-was created to demonstrate the major CI/CD pipeline stages.
-
-The script represents:
-
-```text
-Source Code
-    ↓
-Build
-    ↓
-Testing
-    ↓
-Package
-    ↓
-Staging
-    ↓
-Production
-```
-
-## Step 4: Executed Script
-
-The pipeline script was executed using:
-
-```powershell
-.\pipeline.ps1
-```
-
-## Step 5: Verified Output
-
-The script successfully completed all theoretical pipeline stages.
-
-## Step 6: Added Files to Git
-
-The following Git commands were used:
-
-```bash
-git status
-git add .
-git commit -m "Add CI/CD Concepts L1 assignment"
-```
-
-## Step 7: Pushed Assignment to GitHub
-
-The assignment was uploaded to GitHub using:
-
-```bash
-git push
-```
-
----
-
-# Output
-
-The PowerShell pipeline script displayed the following result:
-
-```text
-Starting CI/CD Pipeline
-
-Step 1: Source Code
-Application code received from GitHub.
-
-Step 2: Build
-Building web application...
-Build Successful
-
-Step 3: Testing
-Running automated tests...
-Tests Passed
-
-Step 4: Package
-Preparing application for deployment...
-
-Step 5: Staging
-Deploying application to staging environment...
-
-Step 6: Production
-Application is ready for production deployment.
-
-CI/CD Pipeline Completed Successfully
-```
-
----
-
-# Repository Structure
-
-```text
-CI-CD-Concepts-L1/
-│
-├── README.md
-├── index.html
-├── pipeline.ps1
-└── screenshots/
-    ├── 01-vscode-files.png
-    ├── 02-pipeline-output.png
-    └── 03-github-repository.png
-```
 
 ---
 

@@ -1,0 +1,10 @@
+2026-09-28 10:00:01 INFO Server started successfully
+2026-09-28 10:01:12 INFO User login successful
+2026-09-28 10:02:20 WARNING CPU usage is high
+2026-09-28 10:03:15 ERROR Database connection failed
+2026-09-28 10:04:10 INFO Backup started
+2026-09-28 10:05:45 ERROR Failed to connect to API
+2026-09-28 10:06:30 INFO Backup completed
+2026-09-28 10:07:25 WARNING Memory usage is high
+2026-09-28 10:08:40 ERROR Application timeout occurred
+2026-09-28 10:09:50 INFO Server is running normally
